@@ -1,3 +1,10 @@
 .passHeader {
     text-align: center;
+    padding: 10px;
+}
+.bodyBorder {
+    height: auto;
+    width: 95%;
+    background-color: white;
+    padding: 10px;
 }
