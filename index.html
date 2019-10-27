@@ -12,29 +12,47 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="passHeader">
-                <h1>Password Generator</h1>
-            </div>
-            <div class="bodyBorder">
-                <h2>Generate a Password</h2>
-                <hr size="1" color="grey" align="left">
-                </hr>
-                <form>
-                    <div class="form-group">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </form>
-                <hr size="1" color="grey" align="left">
-                </hr>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
+    <script type="text/javascript">
+    
+    var passQ = "Would you like to create a Password???";
+    var passAmt = "How many characters would you like your password to be??? Minimum 8, Maximum 128";
+    var passSpec = "Would you like to add special characters???";
+    var passNum = "Would you like to add numeric characters???";
+    var passLow = "Would you like lowercase characters???";
+    var passUpp = "Would you like uppercase characters???";
+    
+    
+    
+    
+    
+    </script>
+
+
+    <div class="allContent">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="passHeader">
+                    <h1>Password Generator</h1>
+                </div>
+                <div class="bodyBorder">
+                    <h2>Generate a Password</h2>
+                    <hr size="1" color="grey" align="left">
+                    </hr>
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-secondary btn-lg">Copy to Clipboard</button>
+                    </form>
+                    <hr size="1" color="grey" align="left">
+                    </hr>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btn-lg">Copy to Clipboard</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -8,3 +8,9 @@
     background-color: white;
     padding: 10px;
 }
+.allContent {
+    padding: 100px 10px 100px 10px;
+    height: 95%;
+    width: 100%;
+    align-content: center;
+}
