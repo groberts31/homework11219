@@ -12,22 +12,6 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-    
-    var passQ = "Would you like to create a Password???";
-    var passAmt = "How many characters would you like your password to be??? Minimum 8, Maximum 128";
-    var passSpec = "Would you like to add special characters???";
-    var passNum = "Would you like to add numeric characters???";
-    var passLow = "Would you like lowercase characters???";
-    var passUpp = "Would you like uppercase characters???";
-    
-    
-    
-    
-    
-    </script>
-
-
     <div class="allContent">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -58,8 +42,30 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    <script type="text/javascript">
+
+        var passQ = confirm("Would you like to create a Password???");
+        var passAmt = "How many characters would you like your password to be??? Minimum 8, Maximum 128";
+        var passSpec = "Would you like to add special characters???";
+        var passNum = "Would you like to add numeric characters???";
+        var passLow = "Would you like lowercase characters???";
+        var passUpp = "Would you like uppercase characters???";
+        var noPass = "I guess this concludes our session..."
+
+
+        if (passQ) {
+            prompt(passAmt);
+        }
+        else {
+            alert(noPass);
+        }
+
+
+
+
+    </script>
 
 
 </body>
