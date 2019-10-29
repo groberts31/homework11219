@@ -1,4 +1,4 @@
-
+//Generate Password
 
 var passQ = confirm("Would you like to create a Password???");
 var passAmt = "How many characters would you like your password to be??? Minimum 8, Maximum 128";
@@ -20,14 +20,6 @@ else {
 //     console.log(passCharAmt);
 //     prompt(passSpec);
 // }
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-var uppLetters = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z];
-var lowLetters = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
-var specChar = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "^",
-    "~", "*", "?", ":", "\"", "\\"];
-
-
-
 
 // if (passAmt >= 8 <= 128) {
 //     prompt(passSpec);
@@ -35,3 +27,21 @@ var specChar = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "^",
 // else {
 //     prompt(passAmt);
 // }
+
+
+function generate() {
+    let passCharAmt = document.getElementById(passAmt = passAmt)value;
+
+    // Possiible Password Values
+    let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+
+    let password = "";
+
+    for (var i = 0; i <= passCharAmt; i++) {
+        password = password + values.charAt(Math.floor(Math.random() * Math.floor(value,length - 1)));
+    }
+
+    //add password to rtextbox.display area
+    document.getElementById("passGenerator").value = password;
+
+}
