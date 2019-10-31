@@ -34,6 +34,35 @@ function promptUser(msg) {
         }
         else {
             console.log("no special characters");
+            specialCharacters = false;
+        }
+
+        if (confirm(passNum)) {
+            console.log("yes numeric characters");
+            numericCharacters = true;
+
+        }
+        else {
+            console.log("no numeric characters");
+            numericCharacters = false;
+        }
+        if (confirm(passLow)) {
+            console.log("yes lowercase characters");
+            lowercaseCharacters = true;
+
+        }
+        else {
+            console.log("no lowercase characters");
+            lowercaseCharacters = false;
+        }
+        if (confirm(passUpp)) {
+            console.log("yes uppercase characters");
+            uppercaseCharacters = true;
+
+        }
+        else {
+            console.log("no uppercase characters");
+            uppercaseCharacters = false;
         }
     }
     else {
