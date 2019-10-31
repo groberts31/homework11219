@@ -15,7 +15,6 @@ var lowercaseCharacters;
 var uppercaseCharacters;
 
 
-// var passCharAmt = (passAmt = true);
 
 
 if (passQ) {
@@ -37,15 +36,17 @@ function promptUser(msg) {
             specialCharacters = false;
         }
 
+        
         if (confirm(passNum)) {
             console.log("yes numeric characters");
             numericCharacters = true;
-
         }
         else {
             console.log("no numeric characters");
             numericCharacters = false;
         }
+        
+        
         if (confirm(passLow)) {
             console.log("yes lowercase characters");
             lowercaseCharacters = true;
@@ -55,6 +56,8 @@ function promptUser(msg) {
             console.log("no lowercase characters");
             lowercaseCharacters = false;
         }
+        
+        
         if (confirm(passUpp)) {
             console.log("yes uppercase characters");
             uppercaseCharacters = true;
