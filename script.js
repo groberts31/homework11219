@@ -7,41 +7,66 @@ var passNum = "Would you like to add numeric characters???";
 var passLow = "Would you like lowercase characters???";
 var passUpp = "Would you like uppercase characters???";
 var noPass = "I guess this concludes our session...";
+
+var characterAmount;
+var specialCharacters;
+var numericCharacters;
+var lowercaseCharacters;
+var uppercaseCharacters;
+
+
 // var passCharAmt = (passAmt = true);
 
 
 if (passQ) {
-    prompt(passAmt);
+    promptUser(passAmt);
 }
 else {
     alert(noPass);
 }
-// if (passAmt >= 8 && passAmt <= 128) {
-//     console.log(passCharAmt);
-//     prompt(passSpec);
-// }
 
-// if (passAmt >= 8 <= 128) {
-//     prompt(passSpec);
-// }
-// else {
-//     prompt(passAmt);
-// }
+function promptUser(msg) {
+    if (validate(prompt(msg))){
+        if (confirm(passSpec)) {
+            console.log("yes special characters");
+            specialCharacters = true;
 
-
-function generate() {
-    let passCharAmt = document.getElementById(passAmt = passAmt)value;
-
-    // Possiible Password Values
-    let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-
-    let password = "";
-
-    for (var i = 0; i <= passCharAmt; i++) {
-        password = password + values.charAt(Math.floor(Math.random() * Math.floor(value,length - 1)));
+        }
+        else {
+            console.log("no special characters");
+        }
     }
-
-    //add password to rtextbox.display area
-    document.getElementById("passGenerator").value = password;
-
+    else {
+        promptUser(msg);
+        
+    }
 }
+
+
+function validate(input) {
+    var succeed = false
+    console.log("my input is: " + input)
+    if (input >= 8 && input <= 128) {
+        succeed = true;
+        characterAmount = input;
+        console.log("succeeded");
+    } else {
+        console.log("failed");
+    }
+    return succeed;
+}
+
+
+// function generate(length) {
+//     var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//     var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+//     var numbers = '0123456789';
+//     var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
+//     var all = uppercase + lowercase + numbers + symbols;
+//     var password = '';
+//     for (var index = 0; index < length; index++) {
+//         var character = Math.floor(Math.random() * all.length);
+//         password += all.substring(character, character + 1);
+//     }
+//     return password;
+// }
