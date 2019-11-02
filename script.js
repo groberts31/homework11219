@@ -19,7 +19,7 @@ var uppercaseCharacters;
 
 
 
-
+// If/Else for first alert to check if the user would like to create a password
 if (passQ) {
     promptUser(passAmt);
 }
@@ -27,6 +27,7 @@ else {
     alert(noPass);
 }
 
+// Function to check answers of alerts
 function promptUser(msg) {
     if (validate(prompt(msg))) {
         if (confirm(passSpec)) {
