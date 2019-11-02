@@ -25,7 +25,7 @@ else {
 }
 
 function promptUser(msg) {
-    if (validate(prompt(msg))){
+    if (validate(prompt(msg))) {
         if (confirm(passSpec)) {
             console.log("yes special characters");
             specialCharacters = true;
@@ -36,7 +36,7 @@ function promptUser(msg) {
             specialCharacters = false;
         }
 
-        
+
         if (confirm(passNum)) {
             console.log("yes numeric characters");
             numericCharacters = true;
@@ -45,8 +45,8 @@ function promptUser(msg) {
             console.log("no numeric characters");
             numericCharacters = false;
         }
-        
-        
+
+
         if (confirm(passLow)) {
             console.log("yes lowercase characters");
             lowercaseCharacters = true;
@@ -56,8 +56,8 @@ function promptUser(msg) {
             console.log("no lowercase characters");
             lowercaseCharacters = false;
         }
-        
-        
+
+
         if (confirm(passUpp)) {
             console.log("yes uppercase characters");
             uppercaseCharacters = true;
@@ -70,7 +70,7 @@ function promptUser(msg) {
     }
     else {
         promptUser(msg);
-        
+
     }
 }
 
@@ -86,6 +86,43 @@ function validate(input) {
         console.log("failed");
     }
     return succeed;
+}
+
+
+function generate() {
+    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    var numbers = '0123456789';
+    var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
+    var password = '';
+    var all;
+
+    if (specialCharacters) {
+        all = all + symbols;
+    }
+
+    if (uppercaseCharacters) {
+        all = all + uppercase;
+    }
+    if (lowercaseCharacters) {
+        all = all + lowercase;
+    }
+    if (numericCharacters) {
+        all = all + numbers;
+    }
+    for (var index = 0; index < characterAmount; index++) {
+        var character = Math.floor(Math.random() * all.length);
+        password += all.substring(character, character + 1);
+    }
+    console.log(password);
+    document.getElementById("passGenerator").innerHTML = password;
+}
+
+function copyToClip() {
+    var copyText = document.getElementById("passGenerator");
+    copyText.select();
+    document.execCommand("copy");
+    console.log("copy successful")
 }
 
 

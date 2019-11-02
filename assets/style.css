@@ -14,3 +14,22 @@
     width: 100%;
     align-content: center;
 }
+
+.btn-generate {
+    color: white;
+    background: red;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.btn-copy {
+    color: white;
+    background: grey;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+textarea.form-control {
+    border: 2px dashed #ced4da;
+    text-align: center;
+}
