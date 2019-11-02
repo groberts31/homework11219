@@ -1,5 +1,7 @@
 //Generate Password
 
+// Vars for to ask questions regarding password options
+
 var passQ = confirm("Would you like to create a Password???");
 var passAmt = "How many characters would you like your password to be??? Minimum 8, Maximum 128";
 var passSpec = "Would you like to add special characters???";
@@ -8,6 +10,7 @@ var passLow = "Would you like lowercase characters???";
 var passUpp = "Would you like uppercase characters???";
 var noPass = "I guess this concludes our session...";
 
+// These vars hold the info given from the answers the users select
 var characterAmount;
 var specialCharacters;
 var numericCharacters;
